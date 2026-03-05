@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: rt_segmentation_demo
+Version: 0.1.0
+Summary: Real-time segmentation wrappers for P2AT and DDRNet
+Requires-Python: >=3.8
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: pyyaml
+Requires-Dist: gradio
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
