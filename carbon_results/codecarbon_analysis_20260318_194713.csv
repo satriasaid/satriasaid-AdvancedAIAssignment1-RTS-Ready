@@ -1,0 +1,16 @@
+accident_emissions_saved_annual_tons,accidents_avoided_annual,annual_emissions_kg_co2,annual_emissions_tons_co2,base_annual_emissions_per_truck_tons,days_per_year,device,efficiency_improvement_percent,elapsed_time_seconds,emissions_per_inference_g,emissions_saved_per_truck_annual_tons,fps,fuel_saved_per_truck_annual_gallons,hours_per_day,inferences_per_second,inferences_per_year,is_net_positive,measured_emissions_per_inf_g,model_name,model_size_mb,net_impact_tons,num_inferences,num_trucks,roi_ratio,timestamp,total_adas_savings_tons,total_annual_savings_tons,total_emissions_kg,total_model_emissions_tons,total_period_savings_tons,years_of_operation
+,,,,,,cuda,,0.08,9.2e-05,,,,,1265.9,,,,DDRNet-23s_cityscapes,22.98,,100,,,2026-03-18T19:46:20.890949,,,9e-06,,,
+,,35.208,0.0352,,250,,,,,,30,,8,,216000000,,0.000163,DDRNet-23s_cityscapes,,,,,,,,,,,,
+,,,,,,cuda,,0.06,8.4e-05,,,,,1797.48,,,,DDRNet-23s_sydneyscapes,22.98,,100,,,2026-03-18T19:46:30.334689,,,8e-06,,,
+,,34.992,0.035,,250,,,,,,30,,8,,216000000,,0.000162,DDRNet-23s_sydneyscapes,,,,,,,,,,,,
+,,,,,,cuda,,0.08,9.4e-05,,,,,1180.86,,,,P2AT-M_cityscapes,91.97,,100,,,2026-03-18T19:46:39.893043,,,9e-06,,,
+,,34.992,0.035,,250,,,,,,30,,8,,216000000,,0.000162,P2AT-M_cityscapes,,,,,,,,,,,,
+,,,,,,cuda,,0.07,9.3e-05,,,,,1476.97,,,,P2AT-M_sydneyscapes,91.97,,100,,,2026-03-18T19:46:49.398967,,,9e-06,,,
+,,37.584,0.0376,,250,,,,,,30,,8,,216000000,,0.000174,P2AT-M_sydneyscapes,,,,,,,,,,,,
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,100,,,,3888.71,,,19443.55,5
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,1000,,,,38887.1,,,194435.52,5
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,5000,,,,194435.52,,,972177.6,5
+,,,,,,,,,,,,,,,,True,,DDRNet-23s_cityscapes,,194248.52,,1000,1039.8,,194435.52,,,187.0,,5
+,,,,,,,,,,,,,,,,True,,DDRNet-23s_sydneyscapes,,194248.52,,1000,1039.8,,194435.52,,,187.0,,5
+,,,,,,,,,,,,,,,,True,,P2AT-M_cityscapes,,194244.52,,1000,1018.0,,194435.52,,,191.0,,5
+,,,,,,,,,,,,,,,,True,,P2AT-M_sydneyscapes,,194258.52,,1000,1098.5,,194435.52,,,177.0,,5
