@@ -26,8 +26,8 @@ A Python project that wraps both **P2AT** and **DDRNet-23-Slim** PyTorch models 
 
 3.  **Download Pre-trained Weights**:
     Place the pretrained models in the `checkpoints/` directory. 
-    - **P2AT**: e.g. `checkpoints/P2AT-M_best.pth`.
-    - **DDRNet**: e.g. `checkpoints/DDRNet-23s_best.pth`.
+    - **P2AT**: e.g. `checkpoints/P2AT-M_best_cityscapes`.
+    - **DDRNet**: e.g. `checkpoints/DDRNet-23s_best_cityscapes`.
 
 ## Running the Demos
 
@@ -39,27 +39,27 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 ### Webcam CLI Demo
 Processes the stream from camera `0` and displays an overlay.
 
-**Run P2AT Model**
+**Run P2AT Model (Cityscapes)**
 ```bash
 python3 -m rtseg.demo.webcam_demo \
     --model p2at \
     --cfg third_party/p2at/configs/camvid/P2AT_medium_camvid.yaml \
-    --checkpoint checkpoints/P2AT-M_best.pth \
+    --checkpoint checkpoints/P2AT-M_best_cityscapes \
     --device cuda \
     --camera 0
 ```
 
-**Run DDRNet Model**
+**Run DDRNet Model (Cityscapes)**
 ```bash
 python3 -m rtseg.demo.webcam_demo \
     --model ddrnet \
-    --checkpoint checkpoints/DDRNet-23s_best.pth \
+    --checkpoint checkpoints/DDRNet-23s_best_cityscapes \
     --device cuda \
     --camera 0
 ```
 
 ### Gradio Web App
-Starts a local web interface [http://localhost:7860](http://localhost:7860) to test image segmentation with a live class legend.
+Starts a local web interface [http://localhost:7860](http://localhost:7860) where you can select between 4 different checkpoints (P2AT-M/DDRNet-23s on Cityscapes/Sydneyscapes).
 
 ```bash
 python3 -m rtseg.demo.gradio_app

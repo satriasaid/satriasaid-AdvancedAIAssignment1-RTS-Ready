@@ -1,13 +1,37 @@
+import os
 import cv2
+import torch
 import gradio as gr
 import numpy as np
 
 # A global dictionary to keep Segmenters active
 # Prevents reloading weights on every inference
-_models = {
-    "p2at": None,
-    "ddrnet": None
-}
+_models = {}
+
+CHECKPOINT_CONFIGS = [
+    {
+        "name": "P2AT-M (Cityscapes)",
+        "type": "p2at",
+        "ckpt": "checkpoints/P2AT-M_best_cityscapes",
+        "cfg": "third_party/p2at/configs/camvid/P2AT_medium_camvid.yaml"
+    },
+    {
+        "name": "P2AT-M (Sydneyscapes)",
+        "type": "p2at",
+        "ckpt": "checkpoints/P2AT-M_best_sydneyscapes",
+        "cfg": "third_party/p2at/configs/camvid/P2AT_medium_camvid.yaml"
+    },
+    {
+        "name": "DDRNet-23s (Cityscapes)",
+        "type": "ddrnet",
+        "ckpt": "checkpoints/DDRNet-23s_best_cityscapes",
+    },
+    {
+        "name": "DDRNet-23s (Sydneyscapes)",
+        "type": "ddrnet",
+        "ckpt": "checkpoints/DDRNet-23s_best_sydneyscapes",
+    }
+]
 
 CITYSCAPES_CLASSES = [
     "Road", "Sidewalk", "Building", "Wall", "Fence", "Pole",
@@ -32,32 +56,30 @@ def get_html_legend():
 
 def load_models_if_needed():
     # Only try to load them if they don't exist yet
-    # Adjust paths or load from environment variables if necessary.
-    # For the web demo, we assume the user has configured the standard paths.
     global _models
     
-    device = "cuda"
+    device = "cuda" if cv2.cuda.getCudaEnabledDeviceCount() > 0 else "cpu"
+    # Actually, let's just use cuda if available, otherwise cpu
+    device = "cuda" if torch.cuda.is_available() else "cpu"
     
-    if _models["p2at"] is None:
-        try:
-            from rtseg.models.p2at_segmenter import P2ATSegmenter
-            # Correct paths for P2AT-Medium
-            cfg = "third_party/p2at/configs/camvid/P2AT_medium_camvid.yaml"
-            ckpt = "checkpoints/P2AT-M_best.pth"
-            _models["p2at"] = P2ATSegmenter(cfg, ckpt, device)
-            print("Loaded P2AT web wrapper.")
-        except Exception as e:
-            print(f"P2AT optional load failed: {e}")
-            
-    if _models["ddrnet"] is None:
-        try:
-            from rtseg.models.ddrnet_segmenter import DDRNet23SlimSegmenter
-            # Correct path for DDRNet-23s
-            ckpt = "checkpoints/DDRNet-23s_best.pth"
-            _models["ddrnet"] = DDRNet23SlimSegmenter(ckpt, device)
-            print("Loaded DDRNet web wrapper.")
-        except Exception as e:
-            print(f"DDRNet optional load failed: {e}")
+    for config in CHECKPOINT_CONFIGS:
+        name = config["name"]
+        if _models.get(name) is None:
+            ckpt_path = config["ckpt"]
+            if not os.path.exists(ckpt_path):
+                print(f"Skipping {name}: checkpoint not found at {ckpt_path}")
+                continue
+                
+            try:
+                if config["type"] == "p2at":
+                    from rtseg.models.p2at_segmenter import P2ATSegmenter
+                    _models[name] = P2ATSegmenter(config["cfg"], ckpt_path, device)
+                elif config["type"] == "ddrnet":
+                    from rtseg.models.ddrnet_segmenter import DDRNet23SlimSegmenter
+                    _models[name] = DDRNet23SlimSegmenter(ckpt_path, device)
+                print(f"Loaded {name} wrapper.")
+            except Exception as e:
+                print(f"{name} load failed: {e}")
 
 
 def process_video_frame(frame: np.ndarray, model_name: str) -> np.ndarray:
@@ -95,7 +117,7 @@ def create_app():
         default_model = available_models[0]
         
     with gr.Blocks(title="Real-Time Segmentation") as app:
-        gr.Markdown("# PyTorch Real-Time Segmentation Demo\nCompare **P2AT** and **DDRNet** on webcam.")
+        gr.Markdown("# PyTorch Real-Time Segmentation Demo\nCompare **P2AT-M** and **DDRNet-23s** checkpoints on Cityscapes and Sydneyscapes.")
         
         with gr.Row():
             with gr.Column(scale=1):
