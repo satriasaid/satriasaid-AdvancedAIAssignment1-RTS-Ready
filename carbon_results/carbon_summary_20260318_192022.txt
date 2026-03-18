@@ -1,0 +1,61 @@
+================================================================================
+CARBON EMISSION ANALYSIS SUMMARY REPORT
+Generated: 2026-03-18 19:20:22
+================================================================================
+
+MODELS ANALYZED:
+--------------------------------------------------------------------------------
+
+DDRNet-23s_cityscapes:
+  Description: Road segmentation for city driving
+  Size: 22.98 MB
+  Parameters: 3.5M
+  FLOPs: 10.2G
+
+DDRNet-23s_sydneyscapes:
+  Description: Road segmentation for Sydney conditions
+  Size: 22.98 MB
+  Parameters: 3.5M
+  FLOPs: 10.2G
+
+P2AT-M_cityscapes:
+  Description: Advanced road segmentation for city driving
+  Size: 91.97 MB
+  Parameters: 14.2M
+  FLOPs: 28.5G
+
+P2AT-M_sydneyscapes:
+  Description: Advanced road segmentation for Sydney conditions
+  Size: 91.97 MB
+  Parameters: 14.2M
+  FLOPs: 28.5G
+
+
+================================================================================
+KEY FINDINGS:
+--------------------------------------------------------------------------------
+
+• Total net carbon savings across all scenarios: 765487.08 tons CO2
+• Average ROI ratio: 81.7x (savings / emissions)
+• All models show net positive environmental impact
+
+
+ADAS BENEFITS ANALYZED:
+--------------------------------------------------------------------------------
+• Fuel efficiency improvement: 8.0%
+• Accident reduction: 21.0%
+• Idle time reduction: 12.0%
+• Optimal routing improvement: 5.0%
+
+
+ASSUMPTIONS:
+--------------------------------------------------------------------------------
+• Average freight truck fuel consumption: 6.5 mpg
+• Annual mileage per truck: 100,000 miles
+• CO2 per gallon diesel: 22.2 lbs
+• Grid carbon intensity: 0.475 kg CO2/kWh
+
+
+================================================================================
+End of Report
+================================================================================

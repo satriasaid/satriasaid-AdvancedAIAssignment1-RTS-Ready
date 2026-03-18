@@ -1,0 +1,78 @@
+================================================================================
+ADAS CARBON ANALYSIS REPORT (Using CodeCarbon)
+Generated: 2026-03-18 19:39:22
+Device: cpu
+================================================================================
+
+MODELS ANALYZED:
+--------------------------------------------------------------------------------
+
+DDRNet-23s_cityscapes:
+  Path: checkpoints/DDRNet-23s_best_cityscapes
+  Size: 22.98 MB
+
+DDRNet-23s_sydneyscapes:
+  Path: checkpoints/DDRNet-23s_best_sydneyscapes
+  Size: 22.98 MB
+
+P2AT-M_cityscapes:
+  Path: checkpoints/P2AT-M_best_cityscapes
+  Size: 91.97 MB
+
+P2AT-M_sydneyscapes:
+  Path: checkpoints/P2AT-M_best_sydneyscapes
+  Size: 91.97 MB
+
+
+MEASURED EMISSIONS:
+--------------------------------------------------------------------------------
+
+DDRNet-23s_cityscapes:
+  Per inference: 0.000029 g CO2
+  Speed: 186.6 inf/s
+
+DDRNet-23s_sydneyscapes:
+  Per inference: 0.000023 g CO2
+  Speed: 221.2 inf/s
+
+P2AT-M_cityscapes:
+  Per inference: 0.000027 g CO2
+  Speed: 170.5 inf/s
+
+P2AT-M_sydneyscapes:
+  Per inference: 0.000023 g CO2
+  Speed: 196.9 inf/s
+
+
+NET IMPACT SUMMARY:
+--------------------------------------------------------------------------------
+
+DDRNet-23s_cityscapes:
+  Net impact: 194,392.52 tons CO2 (POSITIVE)
+  ROI: 4521.8x
+
+DDRNet-23s_sydneyscapes:
+  Net impact: 194,390.02 tons CO2 (POSITIVE)
+  ROI: 4273.3x
+
+P2AT-M_cityscapes:
+  Net impact: 194,390.02 tons CO2 (POSITIVE)
+  ROI: 4273.3x
+
+P2AT-M_sydneyscapes:
+  Net impact: 194,388.02 tons CO2 (POSITIVE)
+  ROI: 4093.4x
+
+
+ADAS BENEFITS MODELED:
+--------------------------------------------------------------------------------
+  fuel_efficiency_improvement: 0.08
+  accident_reduction: 0.21
+  idle_time_reduction: 0.12
+  optimal_routing: 0.05
+  emissions_per_accident: 1500
+
+
+================================================================================
+End of Report
+================================================================================

@@ -1,0 +1,5 @@
+model,flops,params,size_mb,fps,hours_per_day,days_per_year,energy_per_inference_joules,annual_energy_kwh,annual_emissions_kg_co2,annual_emissions_tons_co2
+DDRNet-23s_cityscapes,10.2G,3.5M,22.98,30,8,250,10.200000000000001,680.0,323.0,0.323
+DDRNet-23s_sydneyscapes,10.2G,3.5M,22.98,30,8,250,10.200000000000001,680.0,323.0,0.323
+P2AT-M_cityscapes,28.5G,14.2M,91.97,30,8,250,28.5,1900.0,902.5,0.9025
+P2AT-M_sydneyscapes,28.5G,14.2M,91.97,30,8,250,28.5,1900.0,902.5,0.9025

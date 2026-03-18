@@ -1,0 +1,12 @@
+accident_emissions_saved_annual_tons,accidents_avoided_annual,annual_emissions_kg_co2,annual_emissions_tons_co2,annual_energy_kwh,annual_fuel_consumption_gallons,annual_mileage,base_annual_emissions_tons,base_fuel_efficiency_mpg,days_per_year,efficiency_improvement_percent,emissions_saved_per_truck_annual_tons,energy_per_inference_joules,flops,fps,fuel_saved_per_truck_annual_gallons,hours_per_day,is_net_positive,model,model_name,net_impact_tons,num_trucks,params,payback_period_days,roi_ratio,size_mb,total_adas_savings_tons,total_annual_savings_per_truck_tons,total_annual_savings_tons,total_model_emissions_tons,total_savings_over_period_tons,years_of_operation
+,,323.0,0.323,680.0,,,,,250,,,10.200000000000001,10.2G,30,,8,,DDRNet-23s_cityscapes,,,,3.5M,,,22.98,,,,,,
+,,323.0,0.323,680.0,,,,,250,,,10.200000000000001,10.2G,30,,8,,DDRNet-23s_sydneyscapes,,,,3.5M,,,22.98,,,,,,
+,,902.5,0.9025,1900.0,,,,,250,,,28.5,28.5G,30,,8,,P2AT-M_cityscapes,,,,14.2M,,,91.97,,,,,,
+,,902.5,0.9025,1900.0,,,,,250,,,28.5,28.5G,30,,8,,P2AT-M_sydneyscapes,,,,14.2M,,,91.97,,,,,,
+0.04095,0.0273,,,,15384.615384615385,100000,155.3846153846154,6.5,,25.0,38.84615384615385,,,,3846.153846153846,,,,,,100,,,,,,38.88710384615385,3888.710384615385,,19443.551923076924,5
+0.04095,0.0273,,,,15384.615384615385,100000,155.3846153846154,6.5,,25.0,38.84615384615385,,,,3846.153846153846,,,,,,1000,,,,,,38.88710384615385,38887.10384615385,,194435.51923076925,5
+0.04095,0.0273,,,,15384.615384615385,100000,155.3846153846154,6.5,,25.0,38.84615384615385,,,,3846.153846153846,,,,,,5000,,,,,,38.88710384615385,194435.51923076925,,972177.5961538462,5
+,,,,,,,,,,,,,,,,,True,,DDRNet-23s_cityscapes,192820.51923076925,1000,,15.158624368944933,120.39351035960944,,194435.51923076925,,,1615.0,,5
+,,,,,,,,,,,,,,,,,True,,DDRNet-23s_sydneyscapes,192820.51923076925,1000,,15.158624368944933,120.39351035960944,,194435.51923076925,,,1615.0,,5
+,,,,,,,,,,,,,,,,,True,,P2AT-M_cityscapes,189923.01923076925,1000,,42.35497985440496,43.0882037076497,,194435.51923076925,,,4512.5,,5
+,,,,,,,,,,,,,,,,,True,,P2AT-M_sydneyscapes,189923.01923076925,1000,,42.35497985440496,43.0882037076497,,194435.51923076925,,,4512.5,,5

@@ -1,0 +1,16 @@
+accident_emissions_saved_annual_tons,accidents_avoided_annual,annual_emissions_kg_co2,annual_emissions_tons_co2,base_annual_emissions_per_truck_tons,days_per_year,device,efficiency_improvement_percent,elapsed_time_seconds,emissions_per_inference_g,emissions_saved_per_truck_annual_tons,fps,fuel_saved_per_truck_annual_gallons,hours_per_day,inferences_per_second,inferences_per_year,is_net_positive,measured_emissions_per_inf_g,model_name,model_size_mb,net_impact_tons,num_inferences,num_trucks,roi_ratio,timestamp,total_adas_savings_tons,total_annual_savings_tons,total_emissions_kg,total_model_emissions_tons,total_period_savings_tons,years_of_operation
+,,,,,,cpu,,0.54,2.9e-05,,,,,186.58,,,,DDRNet-23s_cityscapes,22.98,,100,,,2026-03-18T19:37:45.392590,,,3e-06,,,
+,,9.504,0.0095,,250,,,,,,30,,8,,216000000,,4.4e-05,DDRNet-23s_cityscapes,,,,,,,,,,,,
+,,,,,,cpu,,0.45,2.3e-05,,,,,221.18,,,,DDRNet-23s_sydneyscapes,22.98,,100,,,2026-03-18T19:38:03.060896,,,2e-06,,,
+,,9.288,0.0093,,250,,,,,,30,,8,,216000000,,4.3e-05,DDRNet-23s_sydneyscapes,,,,,,,,,,,,
+,,,,,,cpu,,0.59,2.7e-05,,,,,170.54,,,,P2AT-M_cityscapes,91.97,,100,,,2026-03-18T19:38:20.804260,,,3e-06,,,
+,,9.936,0.0099,,250,,,,,,30,,8,,216000000,,4.6e-05,P2AT-M_cityscapes,,,,,,,,,,,,
+,,,,,,cpu,,0.51,2.3e-05,,,,,196.93,,,,P2AT-M_sydneyscapes,91.97,,100,,,2026-03-18T19:38:38.401430,,,2e-06,,,
+,,10.368,0.0104,,250,,,,,,30,,8,,216000000,,4.8e-05,P2AT-M_sydneyscapes,,,,,,,,,,,,
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,100,,,,3888.71,,,19443.55,5
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,1000,,,,38887.1,,,194435.52,5
+0.041,0.027,,,155.38,,,25.0,,,38.846,,3846.2,,,,,,,,,,5000,,,,194435.52,,,972177.6,5
+,,,,,,,,,,,,,,,,True,,DDRNet-23s_cityscapes,,194392.52,,1000,4521.8,,194435.52,,,43.0,,5
+,,,,,,,,,,,,,,,,True,,DDRNet-23s_sydneyscapes,,194390.02,,1000,4273.3,,194435.52,,,45.5,,5
+,,,,,,,,,,,,,,,,True,,P2AT-M_cityscapes,,194390.02,,1000,4273.3,,194435.52,,,45.5,,5
+,,,,,,,,,,,,,,,,True,,P2AT-M_sydneyscapes,,194388.02,,1000,4093.4,,194435.52,,,47.5,,5
